@@ -10,11 +10,11 @@ const {totalPosts, postsPerPage, setCurrentPage, currentPage} = useContext(Conte
     }
   return (
     <>
-    <div>
+    <div className='bg-red-600 w-fit p-1 rounded-full'>
         {
             pages.length <= 1 ? "" :
             pages.map((page, index)=>{
-                return <button key={index} className={`border-2 border-red-500 px-2 m-1 rounded-sm ${currentPage == page ? "bg-gray-800 text-white" : ""}`} onClick={()=> setCurrentPage(page)}>{page}</button>
+                return <button key={index} className={`border-2 border-gray-200 px-2 m-1 rounded-full ${currentPage == page ? "bg-gray-800 text-white" : ""}`} onClick={()=> setCurrentPage(page)}>{page}</button>
             }) 
         }
     </div>
